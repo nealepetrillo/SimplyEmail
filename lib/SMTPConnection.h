@@ -13,7 +13,7 @@
 #include <stdexcept>
 #include <stdio.h>
 #include <fstream>
-#include <curl/curl.h>" 		//NOTE libcurl needs to be installed in the enviornment path, linked in the linker settings, and this path needs to point to the libcurl header.
+#include <curl/curl.h>
 #include "Email.h"
 
 namespace Communication {
