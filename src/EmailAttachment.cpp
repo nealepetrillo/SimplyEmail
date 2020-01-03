@@ -126,9 +126,6 @@ void EmailAttachment::findMIMEType(std::string filePath){
 
 void EmailAttachment::encodeFile(std::string filePath) {
 
-	//Build the code table
-	char padChar = '=';
-
 	//Create return variable
 	std::string toReturn;
 
@@ -168,6 +165,7 @@ void EmailAttachment::encodeFile(std::string filePath) {
 			//Convert the padded string then remove unnecesary padding
 			toReturn = toReturn + encodeBytes(tempChars).substr(0,(oddCharacters + 1));
 
+			char padChar = '=';
 			for(int i = 0; i<(3-oddCharacters); i++){
 				toReturn = toReturn + padChar;
 			}
