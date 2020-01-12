@@ -1,2 +1,0 @@
-/usr/bin/ar qc libsimplyemail.a  CMakeFiles/simplyemail.dir/src/Email.cpp.o CMakeFiles/simplyemail.dir/src/EmailAttachment.cpp.o CMakeFiles/simplyemail.dir/src/SMTPConnection.cpp.o
-/usr/bin/ranlib libsimplyemail.a
