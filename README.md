@@ -1,4 +1,9 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ee40293144e94e879770c6038540808e)](https://www.codacy.com/manual/nealepetrillo/SimplyEmail?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nealepetrillo/SimplyEmail&amp;utm_campaign=Badge_Grade)
+![Codacy grade](https://img.shields.io/codacy/grade/ee40293144e94e879770c6038540808e?style=for-the-badge)
+
+<a href="https://scan.coverity.com/projects/nealepetrillo-simplyemail">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/20189/badge.svg"/>
+</a>
 
 # SimplyEmail
 A simple C++ email implementation leveraging CURL. 
