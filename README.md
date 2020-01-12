@@ -3,7 +3,9 @@
 
 A simple C++ email implementation leveraging CURL. 
 
-# Supported Operating Systems
+## Building
+
+### Supported Operating Systems
 SimplyEmail has been tested the following operating systems:
 
 | OS           | LibCURL Version |
@@ -13,11 +15,11 @@ SimplyEmail has been tested the following operating systems:
 
 SimplyEmail stictly complies with the C++ 11 standard and so `should` work on any operating system that uspport libcurl and a C++ 11 compiler. However, no testing has been done on any other operating systems. 
 
-# Build Requirements
+### Requirements
 The following are required to build SimplyEmail:
- - CMake 2.8+
- - libcurl 7.29+
- - GCC 4.8.5+
+-  CMake 2.8+
+-  libcurl 7.29+
+-  GCC 4.8.5+
  
 Installing required packages on Ubuntu 18:
 ```ShellSession
@@ -29,7 +31,7 @@ Installing required packages on RHEL 7:
 $ sudo yum install cmake libcurl-devel gcc
 ```
 
-# Building
+### Build steps
 Cmake build
 ```ShellSession
 $ git clone git@github.com:nealepetrillo/SimplyEmail.git
