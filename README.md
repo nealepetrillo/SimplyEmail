@@ -17,9 +17,9 @@ SimplyEmail stictly complies with the C++ 11 standard and so `should` work on an
 
 ### Requirements
 The following are required to build SimplyEmail:
--  CMake 2.8+
--  libcurl 7.29+
--  GCC 4.8.5+
+-   CMake 2.8+
+-   libcurl 7.29+
+-   GCC 4.8.5+
  
 Installing required packages on Ubuntu 18:
 ```ShellSession
