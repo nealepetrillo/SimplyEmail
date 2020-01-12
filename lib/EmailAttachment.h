@@ -14,7 +14,7 @@
 #include <utility>
 #include <stdexcept>
 
-namespace Communication {
+namespace SimplyEmail {
 
 /**
  * \brief Container for email attachments
@@ -124,6 +124,6 @@ private:
 
 };
 
-} /* namespace Communication */
+} /* namespace SimplyEmail */
 
 #endif /* EMAILATTACHMENT_H_ */

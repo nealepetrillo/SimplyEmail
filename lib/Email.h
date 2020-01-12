@@ -21,12 +21,12 @@
 #include "./EmailAttachment.h"
 
 /**
- * \brief Container for external communication functionality.
+ * \brief Container for external SimplyEmail routines.
  *
- * \details Contains and other objects to be used to communicate outside of the program.
+ * \details Contains objects to be used to by SimplyEmail.
  *
  */
-namespace Communication {
+namespace SimplyEmail {
 
 /**
  * \brief Contains functions and members that generate an email for sending via SMTP.
@@ -60,7 +60,7 @@ public:
 	 *
 	 * \return void
 	 */
-	Email(std::string recipient, std::string cc, std::string bcc, std::string from, std::string replyTo, std::string subject, std::string body);
+	Email(std::string recipient, std::string cc, std::string bcc, std::string from, std::string replyTo, std::string subject, const std::string &body);
 
 	/**
 	 * \brief Parametrized constructor
@@ -77,7 +77,7 @@ public:
 	 *
 	 * \return void
 	 */
-	Email(std::vector<std::string> recipients,std::vector<std::string> cc, std::vector<std::string> bcc, std::string from, std::string replyTo, std::string subject, std::string body);
+	Email(std::vector<std::string> recipients,std::vector<std::string> cc, std::vector<std::string> bcc, std::string from, std::string replyTo, std::string subject, const std::string &body);
 
 	//TODO Add other parametrized constructors to allow any combination of vector address inputs.
 
@@ -137,8 +137,8 @@ public:
 	const std::string getSubject() const;
 	void setSubject(const std::string& subject);
 
-	const Communication::EmailAttachment getAttachment(unsigned int attachmentNumber);
-	const std::vector<Communication::EmailAttachment> getAttachments();
+	const SimplyEmail::EmailAttachment getAttachment(unsigned int attachmentNumber);
+	const std::vector<SimplyEmail::EmailAttachment> getAttachments();
 	unsigned int getAttachmentNumber();
 	void addAttachment(const std::string& fileLocation);
 
@@ -151,7 +151,7 @@ private:
 	std::string subject;												/// The text to be contained int he subject
 	std::string body;													/// Text to be appended to the generated text of the email message
 
-	std::vector<Communication::EmailAttachment> attachments;			/// List of attachments to be sent with the message
+	std::vector<SimplyEmail::EmailAttachment> attachments;			/// List of attachments to be sent with the message
 
 	static const std::string bodyType;									/// The MIME type of the body; currently only plain text is supported.
 	static const std::string bodyCharSet;								/// The character set of the body text; currently only UTF-8 is supported.
@@ -192,6 +192,6 @@ private:
 	bool isAddress(const std::string& addressToTest);
 };
 
-} /* namespace DataAnalysis */
+} /* namespace SimplyEmail */
 
 #endif /* EMAIL_H_ */

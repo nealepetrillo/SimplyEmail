@@ -9,7 +9,7 @@
 
 #include "../lib/Email.h"
 
-namespace Communication {
+namespace SimplyEmail {
 
 const std::string Email::bodyType = "text/plain";
 const std::string Email::bodyCharSet = "UTF-8";
@@ -25,11 +25,11 @@ Email::Email() {
 	this->replyTo = "";
 	this->subject = "";
 	this->body = "";
-	this->attachments = std::vector<Communication::EmailAttachment> (0);
+	this->attachments = std::vector<SimplyEmail::EmailAttachment> (0);
 
 }
 
-Email::Email(std::string recipient, std::string _cc, std::string _bcc, std::string _from, std::string _replyTo, std::string _subject, std::string _body){
+Email::Email(std::string recipient, std::string _cc, std::string _bcc, std::string _from, std::string _replyTo, std::string _subject, const std::string &_body){
 	this->recipients = std::vector<std::string> (0);
 	this->addRecipient(recipient);
 
@@ -44,11 +44,11 @@ Email::Email(std::string recipient, std::string _cc, std::string _bcc, std::stri
 	this->subject = _subject;
 	this->body = _body;
 
-	this->attachments = std::vector<Communication::EmailAttachment> (0);
+	this->attachments = std::vector<SimplyEmail::EmailAttachment> (0);
 }
 
 
-Email::Email(std::vector<std::string> _recipients,std::vector<std::string> _cc, std::vector<std::string> _bcc, std::string _from, std::string _replyTo, std::string _subject, std::string _body){
+Email::Email(std::vector<std::string> _recipients,std::vector<std::string> _cc, std::vector<std::string> _bcc, std::string _from, std::string _replyTo, std::string _subject, const std::string &_body){
 	this->recipients = _recipients;
 	this->cc = _cc;
 	this->bcc = _bcc;
@@ -57,7 +57,7 @@ Email::Email(std::vector<std::string> _recipients,std::vector<std::string> _cc, 
 	this->subject = _subject;
 	this->body = _body;
 
-	this->attachments = std::vector<Communication::EmailAttachment> (0);
+	this->attachments = std::vector<SimplyEmail::EmailAttachment> (0);
 }
 
 
@@ -215,7 +215,7 @@ void Email::setSubject(const std::string& _subject) {
 	this->subject = _subject;
 }
 
-const Communication::EmailAttachment Email::getAttachment(unsigned int attachmentNumber){
+const SimplyEmail::EmailAttachment Email::getAttachment(unsigned int attachmentNumber){
 	if(attachmentNumber > this->attachments.size()){
 		throw std::out_of_range("Error getting attachment: attachment number out of range");
 	}
@@ -224,7 +224,7 @@ const Communication::EmailAttachment Email::getAttachment(unsigned int attachmen
 	}
 }
 
-const std::vector<Communication::EmailAttachment> Email::getAttachments(){
+const std::vector<SimplyEmail::EmailAttachment> Email::getAttachments(){
 	return this->attachments;
 }
 
@@ -235,7 +235,7 @@ unsigned int Email::getAttachmentNumber(){
 void Email::addAttachment(const std::string& fileLocation){
 
 	try{
-		Communication::EmailAttachment tempAttachment(fileLocation);
+		SimplyEmail::EmailAttachment tempAttachment(fileLocation);
 
 		this->attachments.push_back(tempAttachment);
 	}
@@ -469,4 +469,4 @@ bool Email::isAddress(const std::string& addressToTest){
 
 	return toReturn;
 }
-} /* namespace Communication */
+} /* namespace SimplyEmail */

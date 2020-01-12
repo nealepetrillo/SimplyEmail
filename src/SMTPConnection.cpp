@@ -9,7 +9,7 @@
 
 #include "../lib/SMTPConnection.h"
 
-namespace Communication {
+namespace SimplyEmail {
 
 const int SMTPConnection::OPENING_CONNECTION = 5;
 const int SMTPConnection::CONNECTION_OPEN = 4;
@@ -84,7 +84,7 @@ void SMTPConnection::disconnect(){
 	this->res = this->CONNECTION_CLOSED;
 }
 
-void SMTPConnection::send(Communication::Email &email){
+void SMTPConnection::send(SimplyEmail::Email &email){
 
 	//Check to make sure that the connection is open
 	if(this->curl) {
@@ -194,4 +194,4 @@ void SMTPConnection::checkConnection(unsigned int toCheck){
 	}
 }
 
-} /* namespace Communication */
+} /* namespace SimplyEmail */

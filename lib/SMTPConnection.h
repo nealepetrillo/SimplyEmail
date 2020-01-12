@@ -16,7 +16,7 @@
 #include <curl/curl.h>
 #include "Email.h"
 
-namespace Communication {
+namespace SimplyEmail {
 
 //TODO Create a debug function to take advantage of the CURLOPT_DEBUGFUNCTION option.
 
@@ -96,7 +96,7 @@ public:
 	 *
 	 * \return void
 	 */
-	void send(Communication::Email &email);
+	void send(SimplyEmail::Email &email);
 
 	/**
 	 * \brief Gets the current staus of sending
@@ -125,6 +125,6 @@ private:
 
 };
 
-} /* namespace Communication */
+} /* namespace SimplyEmail */
 
 #endif /* SMTPCONNECTION_H_ */

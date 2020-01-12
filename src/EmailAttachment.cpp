@@ -8,7 +8,7 @@
  */
 #include "../lib/EmailAttachment.h"
 
-namespace Communication {
+namespace SimplyEmail {
 
 EmailAttachment::EmailAttachment() {
 	this->mimeType = "";
@@ -219,4 +219,4 @@ std::string EmailAttachment::encodeBytes(std::string toEncode){
 
 	return toReturn;
 }
-} /* namespace Communication */
+} /* namespace SimplyEmail */

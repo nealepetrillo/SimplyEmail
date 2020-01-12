@@ -1,0 +1,3 @@
+/home/sgnb221/SimplyEmail/build/CMakeFiles/rebuild_cache.dir
+/home/sgnb221/SimplyEmail/build/CMakeFiles/simplyemail.dir
+/home/sgnb221/SimplyEmail/build/CMakeFiles/edit_cache.dir
