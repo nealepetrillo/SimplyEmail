@@ -29,7 +29,7 @@ Email::Email() {
 
 }
 
-Email::Email(std::string recipient, std::string _cc, std::string _bcc, std::string _from, std::string _replyTo, std::string _subject, const std::string &_body){
+Email::Email(const std::string &recipient, const std::string &_cc, const std::string &_bcc, const std::string &_from, const std::string &_replyTo, const std::string &_subject, const std::string &_body){
 	this->recipients = std::vector<std::string> (0);
 	this->addRecipient(recipient);
 
@@ -48,7 +48,7 @@ Email::Email(std::string recipient, std::string _cc, std::string _bcc, std::stri
 }
 
 
-Email::Email(std::vector<std::string> _recipients,std::vector<std::string> _cc, std::vector<std::string> _bcc, std::string _from, std::string _replyTo, std::string _subject, const std::string &_body){
+Email::Email(const std::vector<std::string> &_recipients, const std::vector<std::string> &_cc, const std::vector<std::string> &_bcc, const std::string &_from, const std::string &_replyTo, const std::string &_subject, const std::string &_body){
 	this->recipients = _recipients;
 	this->cc = _cc;
 	this->bcc = _bcc;
@@ -120,7 +120,7 @@ unsigned int Email::getRecipientNumber(){
 	return this->recipients.size();
 }
 
-void Email::addRecipient(const std::string recipient){
+void Email::addRecipient(const std::string &recipient){
 
 	if(this->isAddress(recipient)){
 		this->recipients.push_back(recipient);

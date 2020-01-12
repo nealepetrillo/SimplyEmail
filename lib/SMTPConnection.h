@@ -76,7 +76,7 @@ public:
 	 *
 	 * \return void
 	 */
-	void initialize(std::string address,std::string username, std::string password);
+	void initialize(const std::string &address, const std::string &username, const std::string &password);
 
 	/**
 	 * \brief Disconnects from an SMTP server

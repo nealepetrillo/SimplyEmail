@@ -41,7 +41,7 @@ SMTPConnection::~SMTPConnection() {
 	this->disconnect();
 }
 
-void SMTPConnection::initialize(std::string address,std::string username, std::string password){
+void SMTPConnection::initialize(const std::string &address, const std::string &username, const std::string &password){
 	//Disconnect any previous sessions
 	if(this->curl) {
 		this->disconnect();

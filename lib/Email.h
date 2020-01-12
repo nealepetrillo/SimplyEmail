@@ -60,7 +60,7 @@ public:
 	 *
 	 * \return void
 	 */
-	Email(std::string recipient, std::string cc, std::string bcc, std::string from, std::string replyTo, std::string subject, const std::string &body);
+	Email(const std::string &recipient, const std::string &cc, const std::string &bcc, const std::string &from, const std::string &replyTo, const std::string &subject, const std::string &body);
 
 	/**
 	 * \brief Parametrized constructor
@@ -77,7 +77,7 @@ public:
 	 *
 	 * \return void
 	 */
-	Email(std::vector<std::string> recipients,std::vector<std::string> cc, std::vector<std::string> bcc, std::string from, std::string replyTo, std::string subject, const std::string &body);
+	Email(const std::vector<std::string> &recipients, const std::vector<std::string> &cc, const std::vector<std::string> &bcc, const std::string &from, const std::string &replyTo, const std::string &subject, const std::string &body);
 
 	//TODO Add other parametrized constructors to allow any combination of vector address inputs.
 
@@ -113,7 +113,7 @@ public:
 	const std::string getRecipient(unsigned int recipientNumber);
 	const std::vector<std::string> getRecipients();
 	unsigned int getRecipientNumber();
-	void addRecipient(const std::string recipient);
+	void addRecipient(const std::string &recipient);
 
 	const std::string getCC(unsigned int ccNumber);
 	const std::vector<std::string> getCCs();
