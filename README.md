@@ -57,7 +57,7 @@ $ cmake ..
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/sgnb221/SimplyEmail/build
-$ make -j
+$ cmake --build .
 Scanning dependencies of target simplyemail
 [ 25%] Building CXX object CMakeFiles/simplyemail.dir/src/Email.cpp.o
 [ 50%] Building CXX object CMakeFiles/simplyemail.dir/src/EmailAttachment.cpp.o
