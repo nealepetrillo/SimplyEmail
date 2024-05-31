@@ -1,6 +1,4 @@
 # SimplyEmail
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ee40293144e94e879770c6038540808e)](https://www.codacy.com/manual/nealepetrillo/SimplyEmail?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nealepetrillo/SimplyEmail&amp;utm_campaign=Badge_Grade)
-
 A simple C++ email implementation leveraging CURL. 
 
 ## Building
@@ -8,10 +6,10 @@ A simple C++ email implementation leveraging CURL.
 ### Supported Operating Systems
 SimplyEmail has been tested the following operating systems:
 
-| OS           | LibCURL Version |
-| ------------ | --------------- |
-| Ubuntu 18.04 | 7.58.0          |
-| RHEL 7.7     | 7.29.0          |
+| OS            | LibCURL Version |
+| ------------- | --------------- |
+| Ubuntu 18.04+ | 7.58.0          |
+| RHEL 7.7+     | 7.29.0          |
 
 SimplyEmail stictly complies with the C++ 11 standard and so `should` work on any operating system that uspport libcurl and a C++ 11 compiler. However, no testing has been done on any other operating systems. 
 
